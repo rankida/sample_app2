@@ -37,5 +37,15 @@ describe Micropost do
     it { should_not be_valid }
   end
 
+  describe "when blank content" do
+    before { @micropost.content = " " }
+    it { should_not be_valid }
+  end
+
+  describe "with content that is too long" do
+    before { @micropost.content = "Rankida" *  21 }
+    it { should_not be_valid }
+  end
+
 end
 

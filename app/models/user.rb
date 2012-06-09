@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 } # dont need presence: because has_secure_password doe this??
   validates :password_confirmation, presence: true
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
   private
 
     def create_remember_token
