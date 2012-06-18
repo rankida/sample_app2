@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(params[:micropost])
     if @micropost.save
-      flash[:success] = "Micropost created!"
+      flash[:success] = "Splutter created!"
       redirect_to root_path
     else
       @feed_items = []
@@ -22,7 +22,7 @@ class MicropostsController < ApplicationController
     def correct_user
       @micropost = current_user.microposts.find_by_id(params[:id])
       if @micropost.nil?
-        flash[:error] = "Unable to delete post."
+        flash[:error] = "Unable to delete splutter."
         redirect_to root_path
       end
     end
