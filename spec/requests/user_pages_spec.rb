@@ -108,6 +108,10 @@ describe "User pages" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
 
+      it "should get confirmation email" do
+        expect { click_button submit }.to change(ActionMailer::Base.deliveries, :count).by(1)
+      end
+
       describe "after submission" do
         before { click_button submit }
         it { should have_selector('title', text: "Example User") }
