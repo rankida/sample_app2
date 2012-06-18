@@ -241,6 +241,11 @@ aside {
   }
 }
 
+/* empty buffer */
+.empty-buffer {
+  @extend .row;
+  height: 80px
+}
 
 
 
