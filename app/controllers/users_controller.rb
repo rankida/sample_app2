@@ -23,7 +23,8 @@ class UsersController < ApplicationController
   	@user = User.new(params[:user])
   	if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Rankida's Sample App!"
+      UserMailer.registration_confirmation(@user).deliver
+      flash[:success] = "Welcome to Splutter"
   		redirect_to @user
   	else
   		render 'new'
