@@ -1,6 +1,8 @@
 == Rails Tutorial (2nd Edition) sample app
 
-This is my attempt at the sample app from [http://ruby.railstutorial.org/](http://ruby.railstutorial.org/). 
+This is my attempt at the sample app from [http://ruby.railstutorial.org/](http://ruby.railstutorial.org/).
+
+I will no longer be committing to this, but will be using it as a base for other projects.
 
 == Welcome to Rails
 
